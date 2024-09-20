@@ -3,7 +3,7 @@
 
     Interface Owner: _lugia.
     Bundling Tool: Latte Softworks & Kotera
-
+    Fixing By MTX Team
 --]]
 
 local setidentity = syn and syn.set_thread_identity or set_thread_identity or setidentity or setthreadidentity or function(...) return ... end
@@ -619,9 +619,10 @@ end
 function Library:CreateWindow(Config)
 	local start = tick()
 	
-	assert(Config.Title, "Toggle - Missing Title")
+	-- assert(Config.Title, "Toggle - Missing Title")
 
-	Config.SubTitle = Config.SubTitle or "MTX Client"
+	Config.Title = Config.Title or "MTX Client"
+	Config.SubTitle = Config.SubTitle or ""
 	Config.TabWidth = 64
 	Config.Size = UDim2.fromOffset(500, 320)
 	Config.Acrylic = Config.Acrylic or true
@@ -688,7 +689,8 @@ function Library:CreateWindow(Config)
 end
 
 function Library:CreateInfoWindow(Config)
-	Config.SubTitle = Config.SubTitle or "MTX Client"
+	Config.Title = Config.Title or "MTX Client"
+	Config.SubTitle = Config.SubTitle or ""
 	Config.Acrylic = Config.Acrylic or true
 	Config.Theme = Config.Theme or "lugia's theme"
 	Config.MinimizeKey = Config.MinimizeKey or Enum.KeyCode.LeftControl
