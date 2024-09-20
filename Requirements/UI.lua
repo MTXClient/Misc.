@@ -3,7 +3,7 @@
 
     Interface Owner: _lugia.
     Bundling Tool: Latte Softworks & Kotera
-    Fixing By MTX Team
+
 --]]
 
 local setidentity = syn and syn.set_thread_identity or set_thread_identity or setidentity or setthreadidentity or function(...) return ... end
@@ -646,7 +646,7 @@ function Library:CreateWindow(Config)
 	local Window = require(Components.Window)({
 		Parent = GUI,
 		Size = Config.Size,
-		Title = Config.Title,
+		Title = Config.Title or "MTX Client",
 		SubTitle = Config.SubTitle,
 		TabWidth = Config.TabWidth,
 	})
@@ -702,7 +702,7 @@ function Library:CreateInfoWindow(Config)
 	local Window = require(Components.InfoWindow)({
 		Parent = GUI,
 		Size = Config.Size,
-		Title = Config.Title,
+		Title = Config.Title or "MTX Client",
 		SubTitle = Config.SubTitle,
 		Position = Config.Position,
 		AnchorPoint = Config.AnchorPoint
