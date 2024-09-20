@@ -621,7 +621,7 @@ function Library:CreateWindow(Config)
 	
 	assert(Config.Title, "Toggle - Missing Title")
 
-	Config.SubTitle = Config.SubTitle or ""
+	Config.SubTitle = Config.SubTitle or "MTX Client"
 	Config.TabWidth = 64
 	Config.Size = UDim2.fromOffset(500, 320)
 	Config.Acrylic = Config.Acrylic or true
@@ -688,7 +688,7 @@ function Library:CreateWindow(Config)
 end
 
 function Library:CreateInfoWindow(Config)
-	Config.SubTitle = Config.SubTitle or ""
+	Config.SubTitle = Config.SubTitle or "MTX Client"
 	Config.Acrylic = Config.Acrylic or true
 	Config.Theme = Config.Theme or "lugia's theme"
 	Config.MinimizeKey = Config.MinimizeKey or Enum.KeyCode.LeftControl
