@@ -1706,7 +1706,7 @@ return function(Config)
 			}),
 			
 			New("ImageLabel", {
-				Image = "http://www.roblox.com/asset/?id=140140658757195",
+				Image = "http://www.roblox.com/asset/?id=97904911975379",
 				AnchorPoint = Vector2.new(0.5, 0.5),
 				BackgroundColor3 = Color3.fromRGB(255, 255, 255),
 				BackgroundTransparency = 1,
@@ -2635,7 +2635,7 @@ function ToggleButton:New(parent, callback)
 			BorderSizePixel = 0,
 			Position = UDim2.fromScale(0.5, 0.5),
 			Size = UDim2.fromScale(1, 1),
-			Image = "http://www.roblox.com/asset/?id=140140658757195",
+			Image = "http://www.roblox.com/asset/?id=97904911975379",
 			ScaleType = Enum.ScaleType.Fit,
 		}) 
 	})
