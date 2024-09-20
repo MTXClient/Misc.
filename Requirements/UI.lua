@@ -623,11 +623,11 @@ function Library:CreateWindow(Config)
 
 	Config.SubTitle = Config.SubTitle or ""
 	Config.TabWidth = 64
-	Config.Size = UDim2.fromOffset(560, 580)
+	Config.Size = UDim2.fromOffset(500, 320)
 	Config.Acrylic = Config.Acrylic or true
 	Config.Theme = Config.Theme or "Darker"
 	Config.MinimizeKey = Config.MinimizeKey or Enum.KeyCode.LeftControl
-	Config.Folder = "Rei Hub"
+	Config.Folder = "MTX Client"
 	Config.Center = Config.Center or true 
 	
 	if Config.Folder then
@@ -635,7 +635,7 @@ function Library:CreateWindow(Config)
 	end
 
 	if Library.Window then
-		print("You cannot create more than one window.")
+	 --	print("You cannot create more than one window.")
 		return
 	end
 	
@@ -692,8 +692,8 @@ function Library:CreateInfoWindow(Config)
 	Config.Acrylic = Config.Acrylic or true
 	Config.Theme = Config.Theme or "lugia's theme"
 	Config.MinimizeKey = Config.MinimizeKey or Enum.KeyCode.LeftControl
-	Config.Folder = Config.Folder or "Rei Hub"
-	Config.Size = Config.Size or UDim2.fromOffset(350, 210)
+	Config.Folder = Config.Folder or "MTX Client"
+	Config.Size = Config.Size or UDim2.fromOffset(500, 320)
 
 	local start = tick()
 
@@ -10582,7 +10582,7 @@ local InterfaceManager = {} do
 		return string.sub(filename, #string(str)) == string(str)
 	end
 
-	InterfaceManager.Folder = "Rei"
+	InterfaceManager.Folder = "MTX"
 	InterfaceManager.Settings = {
 		Theme = "Darker",
 		Acrylic = true,
