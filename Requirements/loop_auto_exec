@@ -14,7 +14,7 @@ queue_on_teleport(string.format([[
     getgenv().id = "%s"
 
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MaruBitkub/main/Mobile.lua"))()
-    loadstring(game:HttpGet(""))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/MTXClient/Misc./refs/heads/main/Requirements/loop_auto_exec"))()
 ]], Key, DiscordId))
 
 print("Loaded Maru - Auto Exec")
