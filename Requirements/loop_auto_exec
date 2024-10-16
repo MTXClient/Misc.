@@ -3,8 +3,8 @@ repeat task.wait(1) until game:IsLoaded()
 
 local queue_on_teleport = queue_on_teleport
 
-local Key = getgenv().Key = ""
-local DiscordId = getgenv().id = ""
+local Key = getgenv().Key
+local DiscordId = getgenv().id
 
 queue_on_teleport(string.format([[ 
     repeat task.wait(1) until game.Players.LocalPlayer
@@ -13,8 +13,17 @@ queue_on_teleport(string.format([[
     getgenv().Key = "%s"
     getgenv().id = "%s"
 
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MaruBitkub/main/Mobile.lua"))()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/MTXClient/Misc./refs/heads/main/Requirements/loop_auto_exec"))()
+    local function SafeCallLoad(url)
+        local success, result = pcall(function() return game:HttpGet(url) end)
+        if success then
+            loadstring(result)()
+        else
+            warn("Failed to load script from " .. url)
+        end
+    end
+
+    SafeCallLoad("https://raw.githubusercontent.com/xshiba/MaruBitkub/main/Mobile.lua")
+    SafeCallLoad("https://raw.githubusercontent.com/MTXClient/Misc./refs/heads/main/Requirements/loop_auto_exec")
 ]], Key, DiscordId))
 
 print("Loaded Maru - Auto Exec")
