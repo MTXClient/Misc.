@@ -2,7 +2,7 @@
 local Config = {
     githubUsername = "MTXClient",   -- Your GitHub username
     githubRepo = "Misc.",        -- Your repository name
-    githubBranch = "main",        -- The branch of your repository to fetch scripts from
+    githubBranch = "main/Requirements",        -- The branch of your repository to fetch scripts from
     scriptPath = "src/scripts"    -- The path to the folder where your scripts are stored
 }
 
